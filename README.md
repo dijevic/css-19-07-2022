@@ -1,4 +1,4 @@
-# css-19-07-2022
+# CSS animation
 a super simple initial card animation
 😁😁😁
 
