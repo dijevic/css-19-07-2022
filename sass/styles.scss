@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&display=swap');
+
+$mainColor : #264653;
+$secondColor:#f4a261;
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin: 0px;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+html{
+    scroll-behavior: smooth;
+    height:100%;
+}
+
+body{
+    min-height: 100vh;
+}
+
+main{
+    background:$mainColor;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    // background-attachment: fixed;
+    min-height: 100vh;
+    filter: blur(50%);
+ 
+    overflow-x: hidden;
+}
+
+
+.darkenDiv{
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1000px;
+    margin: 0px auto;
+    column-gap: 40px;
+    animation-name: opacityAnimation;
+    animation-iteration-count: initial;
+    animation-duration: 1s;
+    transition: .4s ease all;
+    position: relative;
+    h2{
+        position: absolute;
+        top: 20%;
+        font-size: 2rem;
+        line-height: 1.5rem;
+        color:#fff
+    }
+    
+
+}
+
+
+.box{
+    background: $secondColor;
+    width: 200px;
+    height: 200px;
+    border-radius:10px;
+    box-shadow: 5px 5px 5px 5px rgba($color: #000000, $alpha: 0.1);
+    animation-name: scale , border, opacityAnimation;
+    animation-iteration-count: initial;
+    animation-duration: 1s;
+    transition: .4s ease all;
+
+  
+}
+
+.box-1{
+    &:hover{
+        background:#eae2b7;
+        transform:rotate(90deg);
+    }
+}
+.box-2{
+    animation-duration: 1.2s ;
+    &:hover{
+        background:#2a9d8f;
+        transform:rotate(90deg);
+    }
+    
+}
+.box-3{
+    animation-duration: 0.5s ;
+    &:hover{
+        background:#e76f51;
+        transform:rotate(90deg);
+    }
+}
+.box-4{
+    animation-duration: 1.4s ;
+    &:hover{
+        background:#e9c46a;
+        transform:rotate(90deg);
+    }
+}
+
+.box-6{
+    animation-duration: .8s ;
+    &:hover{
+        background:rgba($color: #fff, $alpha: 0.1);;
+        transform:rotate(90deg);
+        box-shadow: 2px 2px 2px 5px rgba($color: #fff, $alpha: 0.1);
+
+    }
+}
+
+
+
+@keyframes scale {
+    0%{transform:scale(0)};
+    100%{transform:scale(1)};
+    
+}
+@keyframes border {
+    0%{border-radius: 100%};
+    100%{border-radius: 10px};
+    
+}
+@keyframes opacityAnimation {
+    0%{opacity:0};
+    100%{opacity:1};
+    
+}
